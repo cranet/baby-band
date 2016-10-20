@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:map="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background_grey"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:weightSum="4">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_weight="1"
+        android:background="@drawable/rounded"
+        android:dividerPadding="@dimen/activity_vertical_margin">
+
+        <tmobile.hackathon.babyband.HeartRateView
+            android:id="@+id/heartRate"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+        <ImageView
+            android:id="@+id/heartIV"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/heartIV"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/heartrateTV"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/heartrateTV"
+                android:layout_marginTop="17dp"
+                android:layout_weight="1"
+                android:text="HEART RATE"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/heartrateTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="8dp"
+                    android:text="85"
+                    android:textColor="@color/white"
+                    android:textSize="50dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/heartrateTV"
+                    android:layout_alignBottom="@+id/heartrateTV"
+                    android:layout_toEndOf="@+id/heartrateTV"
+                    android:layout_toRightOf="@+id/heartrateTV"
+                    android:text="BPM"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_weight="1"
+        android:background="@drawable/rounded"
+        android:dividerPadding="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="75dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/jar"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tempatureTV"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/tempatureTV"
+                android:layout_marginTop="17dp"
+                android:layout_weight="1"
+                android:text="TEMPERATURE"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tempatureTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="8dp"
+                    android:text="85"
+                    android:textColor="@color/white"
+                    android:textSize="50dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tempatureTV"
+                    android:layout_alignBottom="@+id/tempatureTV"
+                    android:layout_toEndOf="@+id/tempatureTV"
+                    android:layout_toRightOf="@+id/tempatureTV"
+                    android:text="F"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_weight="1"
+        android:background="@drawable/rounded">
+
+        <ImageView
+            android:id="@+id/locationImage"
+            android:layout_width="75dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/coolpin"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/locationImage"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="LOCATION"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/locationTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="8dp"
+                    android:text="Seattle Conference Center"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/signalImage"
+            android:layout_width="75dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/signal"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="CONNECTIONS"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/devicesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
